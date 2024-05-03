@@ -48,3 +48,12 @@ switch (opcao)
         break;
     default: console.log('Opção invalida!')
 }
+
+function Teste(a,b){
+    var a = 2;
+    var b = 5;
+    var soma = a + b;
+    return soma;
+}
+
+console.log(Teste)
