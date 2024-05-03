@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        body {font: 12pt Arial;}
+        button {font-size: 12pt; padding: 30px;}
+    </style>
+</head>
+<body>
+    <h1>Calculo da Média do aluno</h1>
+    <button onclick="media()">Calcular média</button>
+    <section id="resultado">
+        <p>O resultado vai aparecer aqui...</p>
+    </section>
+
+    <script>
+    
+        function media() {
+            //Já que o nome não é um número e sim texto, não é preciso colocar Number() para fazer a covnersão
+            let nome = window.prompt('Qual é o nome do aluno?'); 
+            let n1 = Number(window.prompt(`Qual foi a nota P1 de ${nome}?`));
+            let n2 = Number(window.prompt(`Além de ${n1}, qual foi a outra nota de ${nome}?`));
+            //Se você não colocar os parênteses para forçar a precedência, seu cálculo vai dar um resultado errado, 
+            //já que a divisão será feita antes.
+            let med = (n1 + n2)/2 ;
+
+            let res = document.getElementById('resultado');
+            res.innerHTML = `<p>Calculando a média final de ${nome}.</p>`;
+            //O += é necessário, pois indica um pedido de "mantenha a frase anterior, adicionando essa outra frase". 
+            //Se não fosse ele, a linha anterior seria apagada.
+            res.innerHTML += `<p>As notas obtidas foram p1 = ${n1} e p2 = ${n2}.</p>`;
+            res.innerHTML += `<p>A média final será ${med}</p>`;
+        }
+    </script>
+</body>
+</html>

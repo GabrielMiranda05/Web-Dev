@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript externo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>JavaScript - Evento de Clique em Multiplos Botoes</h1>
+    <button onclick="evento1()">Evento 1</button>
+    <button onclick="evento2()">Evento 2</button>
+    <button onclick="evento3()">Evento 3</button>
+    <button onclick="evento4()">Evento 4</button>
+    <section id="resultado">
+        <p>Aqui vou registrar seus eventos - onclick com os botões acima.</p>
+    </section>
+
+    <!-- No lugar de ter muitas linhas escritas dentro do seu documento HTML, use um arquivo externo que vai fazer a carga das suas funções JS no final da página. Isso separa o que é conteúdo (HTML) do que é funcionalidade (JS) -->
+    <script src="eventos.js"></script>
+</body>
+</html>
